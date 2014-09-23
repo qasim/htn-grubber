@@ -1,0 +1,17 @@
+{
+  "name": "htn-grubber",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "ejs": "*",
+    "socket.io": "*",
+    "twitter": "*",
+    "request": "*",
+    "gemoji": "0.1.1",
+    "emoji-strip": "*"
+  }
+}
