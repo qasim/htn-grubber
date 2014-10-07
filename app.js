@@ -46,96 +46,7 @@ var Twitter = new twitter({
     access_token_secret: 'giCkmZosMJGpWH68TLsVE5qfXINsY4NTkFEQibZ6dmNUs'
 });
 
-var valid_words = [
-  "pizza",
-  "chicken",
-  "fried chicken",
-  "friedchicken",
-  "ice cream",
-  "icecream",
-  "mcdonalds",
-  "mcd",
-  "popeyes",
-  "rice",
-  "sushi",
-  "bubbletea",
-  "bbt",
-  "boba tea",
-  "chatime",
-  "shwarma",
-  "free food",
-  "food for free",
-  "banh mi boys",
-  "banhmiboys",
-  "beef",
-  "ramen",
-  "noodle",
-  "popcorn",
-  "candy",
-  "chocolate",
-  "falafel",
-  "chowmein",
-  "chow mein",
-  "burger",
-  "hot dogs",
-  "hotdogs",
-  "hotdog",
-  "patty",
-  "patties",
-  "burgers",
-  "hamburgers",
-  "hamburger",
-  "chickenburger",
-  "chicken burger",
-  "chicken burgers",
-  "chickenburgers",
-  "veggie",
-  "corn",
-  "cornbeef",
-  "taco",
-  "kimchi",
-  "tacos",
-  "soup",
-  "fish",
-  "fish and chips",
-  "fishandchips",
-  "fish&chips",
-  "donuts",
-  "coffee",
-  "timbits",
-  "drinks",
-  "lunch",
-  "dinner",
-  "breakfast",
-  "brunch",
-  "apples",
-  "milk",
-  "oranges",
-  "grapes",
-  "bananas",
-  "banana",
-  "frap",
-  "frappuccino",
-  "mocha",
-  "mochaccino",
-  "cappuccino",
-  "pear",
-  "salmon",
-  "sashimi",
-  "tempura",
-  "water",
-  "ice"
-]
 
-var invalid_words = [
-  "westjet",
-  "air canada",
-  "aircanada",
-  "porter",
-  "bogo",
-  "buy one get one",
-  "bogo pizza"
-]
 
 function wordInString(s, word){
   return new RegExp( '\\b' + word + '\\b', 'i').test(s);
@@ -165,12 +76,12 @@ function twitterSearch() {
             long = loc.coordinates[1]
             lat = loc.coordinates[0]
           }
-          for(var x = 0; x < valid_words.length; x++) {
-            if(wordInString(data.statuses[i].text.toLowerCase(), valid_words[x])) {
+          for(var x = 0; x < tools.valid_words.length; x++) {
+            if(wordInString(data.statuses[i].text.toLowerCase(), tools.valid_words[x])) {
               //There is a food match. Automatically valid.
               var invalidFound = false
-              for(var y = 0; y < invalid_words.length; y++) {
-                if(wordInString(data.statuses[i].text.toLowerCase(), invalid_words[y])) {
+              for(var y = 0; y < tools.invalid_words.length; y++) {
+                if(wordInString(data.statuses[i].text.toLowerCase(), tools.invalid_words[y])) {
                   invalidFound = true
                   break
                 }
