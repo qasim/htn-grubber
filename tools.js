@@ -46,7 +46,6 @@ module.exports = {
 		"corn",
 		"cornbeef",
 		"taco",
-		"kimchi",
 		"tacos",
 		"soup",
 		"fish",
@@ -62,9 +61,7 @@ module.exports = {
 		"breakfast",
 		"brunch",
 		"apples",
-		"milk",
 		"oranges",
-		"grapes",
 		"bananas",
 		"banana",
 		"frap",
@@ -73,11 +70,12 @@ module.exports = {
 		"mochaccino",
 		"cappuccino",
 		"pear",
-		"salmon",
-		"sashimi",
-		"tempura",
 		"water",
-		"ice"
+		"ice",
+		"biscuit",
+		"double double"
+		"timmies"
+		"lemonade"
 	],
 	invalid_words = [
 		"westjet",
@@ -87,5 +85,8 @@ module.exports = {
 		"bogo",
 		"buy one get one",
 		"bogo pizza"
+		"owe"
+		"coupon"
+		"with the purchase of"
 	]
 }
