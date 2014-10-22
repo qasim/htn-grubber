@@ -1,5 +1,5 @@
 body {
-	font-family: 'arial';
+	font-family: 'Arial';
 	overflow: auto;
 	margin: 0 auto;
 	padding: 0px;
@@ -22,12 +22,12 @@ body {
 	}
 
 .handle {
-	font-family: 'Helvetica Neue';
+	font-family: 'Helvetica Neue', 'Arial';
 	font-weight: bold;
 }
 
 .date {
-	font-family: 'Helvetica Neue';
+	font-family: 'Helvetica Neue', 'Arial';
 	color: #8899a6;
 }
 
@@ -37,7 +37,7 @@ a:link, a:visited {
 
 
 .title {
-	font-family: 'Helvetica Neue';
+	font-family: 'Helvetica Neue', 'Arial';
 	font-size: 36px;
 	font-weight: bold;
 	position: absolute;
@@ -60,6 +60,7 @@ a:link, a:visited {
 @media screen and (max-width : 564px) {
 
 .title {
+	font-family: 'Arial';
 	bottom: 0px;
 	left: 0px;
 	width: 100%;
