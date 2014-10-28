@@ -1,7 +1,7 @@
 function makeInfoWindowEvent(map, infowindow, marker) {
    return function() {
       for(var x = 0; x < window.infowindows.length; x++) {
-        window.infowindows[x].close()
+        //window.infowindows[x].close()
       }
       infowindow.open(map, marker)
       jQuery(".timeago").timeago();
@@ -32,13 +32,33 @@ function initialize() {
     if(window.valid_tweets[i].tweet_img != '') {
       addition = '<img src="'+window.valid_tweets[i].tweet_img+'" style="margin-top: 10px;width: 100%;"/>'
     }
-    window.infowindows[i] = new google.maps.InfoWindow({
+
+    window.infowindows[i] = new InfoBox({
+      content: "Hi",
+      disableAutoPan: false,
+      maxWidth: 0,
+      pixelOffset: new google.maps.Size(0, 0),
+      zIndex: null,
+      boxStyle: {
+        background: "url('tipbox.gif') no-repeat",
+        opacity: 0.75,
+        width: "280px",
+      },
+      closeBoxMargin: "10px 2px 2px 2px",
+      closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
+      infoBoxClearance: new google.maps.Size(1, 1),
+      isHidden: false,
+      pane: "floatPane",
+      enableEventPropagation: false
+    });
+
+    /*window.infowindows[i] = new google.maps.InfoWindow({
       content: urlify('<span class="handle">\
         @' + window.valid_tweets[i].tweet_name + '\
       </span> <span class="date">· <span class="timeago" title="' + new Date(parseInt(window.valid_tweets[i].tweet_date) * 1000).toISOString() + '"></span></span> <br />' + window.valid_tweets[i].tweet_text) + '<br />\
       ' + addition,
       maxWidth: 300
-    });
+    });*/
 
     window.markers[i] = new google.maps.Marker({
       position: new google.maps.LatLng(window.valid_tweets[i].tweet_lat,window.valid_tweets[i].tweet_long),
