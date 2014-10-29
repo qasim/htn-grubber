@@ -23,7 +23,7 @@ app.use(express.logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.methodOverride())
-app.use(express.cookieParser('your secret here'))
+app.use(express.cookieParser('ivan got a job at tim hortons'))
 app.use(express.session())
 app.use(app.router)
 app.use(express.static(path.join(__dirname, 'public')))
@@ -44,8 +44,6 @@ var Twitter = new twitter({
     access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
-
-
 
 function wordInString(s, word){
   return new RegExp( '\\b' + word + '\\b', 'i').test(s)
