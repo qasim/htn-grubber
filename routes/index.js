@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'UofT Class Distances' });
+  res.render('index', { title: 'Grubber' });
 };

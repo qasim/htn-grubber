@@ -1,3 +1,5 @@
 thing
 thing.pub
 .env
+error.log
+.DS_Store
