@@ -52,7 +52,6 @@ function wordInString(s, word){
 var valid_tweets = [];
 
 function twitterSearch() {
-  console.log('Lets start')
   valid_tweets = []
   Twitter.search('free', {
     'geocode': '43.66,-79.4,3km',
