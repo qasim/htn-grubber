@@ -3,3 +3,4 @@ thing.pub
 .env
 error.log
 .DS_Store
+tweets.json
