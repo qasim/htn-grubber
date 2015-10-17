@@ -4,3 +4,4 @@ thing.pub
 error.log
 .DS_Store
 tweets.json
+node_modules
